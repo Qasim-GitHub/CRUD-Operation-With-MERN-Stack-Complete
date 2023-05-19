@@ -1,0 +1,10 @@
+const express=require('express')
+const router=express.Router()
+const userController= require('../Controller/controller')
+router.post('/signup',userController.Signup)
+router.get('/all',userController.getUser)
+router.get('/userFind/:id',userController.userById )
+// router.patch('/update/:id', userController.updateUser)
+router.patch('/edit/:id', userController.edituser)
+router.delete('/delete/:id',userController.deleteUser)
+module.exports= router;
